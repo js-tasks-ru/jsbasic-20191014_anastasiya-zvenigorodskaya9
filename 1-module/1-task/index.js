@@ -8,11 +8,11 @@
 const x = Number(prompt('Введите число'));
 const n = Number(prompt('И еще разок'));
 
-function pow(x, n) {
+function pow() {
   let result;
   if (Number.isInteger(x) && Number.isInteger(n)) {
-    alert(Math.pow(x, n));
-    result = Math.pow(x, n);
+    alert(x ** n);
+    result = x ** n;
   } else {
     alert('Можно только целые числа!');
     result = false;
@@ -20,4 +20,4 @@ function pow(x, n) {
   return result;
 }
 
-pow(x, n);
+pow();
