@@ -5,12 +5,12 @@
  * @returns {number}
  */
 
-m = 1;
-n = 1;
+const m = 1;
+const n = 1;
 
-function sum(m, n) {
+function sum() {
   console.log(m + n);
   return m + n;
 }
 
-sum(m, n);
+sum();

@@ -10,7 +10,6 @@ function print(text) {
  * чтобы функция sayHello работала корректно
  */
 function isValid(name) {
-  console.log('1', name);
   name = name.replace(/\s/g, '');
 
   let result;
