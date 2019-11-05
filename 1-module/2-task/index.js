@@ -29,8 +29,7 @@ function sayHello() {
   if (isValid(userName)) {
     alert(`Welcome back,${userName} !`);
   } else {
-    console.log(isValid(userName));
-    print('Некорректное имя');
+    alert('Некорректное имя');
   }
 }
 
