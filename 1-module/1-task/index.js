@@ -5,13 +5,19 @@
  * @returns {number}
  */
 
+const x = Number(prompt('Введите число'));
+const n = Number(prompt('И еще разок'));
 
 function pow(x, n) {
-  x = prompt('Введите число');
-  n = prompt('И еще разок');
-
-  alert(Math.pow(x, n));
-  return Math.pow(x, n);
+  let result;
+  if (Number.isInteger(x) && Number.isInteger(n)) {
+    alert(Math.pow(x, n));
+    result = Math.pow(x, n);
+  } else {
+    alert('Можно только целые числа!');
+    result = false;
+  }
+  return result;
 }
 
-pow();
+pow(x, n);
