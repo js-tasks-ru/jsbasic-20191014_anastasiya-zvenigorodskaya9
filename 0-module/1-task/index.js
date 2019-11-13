@@ -5,6 +5,11 @@
  * @returns {number}
  */
 
-function pow(m, n) {
-  return m ** n;
+const m = 1;
+const l = 1;
+
+function sum() {
+  return m + l;
 }
+
+sum();
