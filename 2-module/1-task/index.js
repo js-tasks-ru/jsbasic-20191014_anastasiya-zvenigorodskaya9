@@ -3,18 +3,23 @@
  * @param {Object} obj - клонируем объект
  * @returns {Object}
  */
-const obj = { test: 1 };
-const obj2 = {};
 
-function clone() {
-  for (const key in obj) {
-    obj2[key] = obj[key];
+function clone(obj) {
+  const result = {};
+
+  if (typeof obj !== 'object') {
+    return obj;
   }
 
-  obj2.test = 2;
+  for (const key in obj) {
+    if (typeof obj[key] === 'object' && obj[key] !== null) {
+      result[key] = clone(obj[key]);
+    } else {
+      result[key] = obj[key];
+    }
+  }
 
-  alert(obj2.test);
-  alert(obj.test);
+  return result;
 }
 
 clone();

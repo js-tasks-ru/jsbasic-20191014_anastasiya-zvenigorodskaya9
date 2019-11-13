@@ -5,11 +5,6 @@
  * @returns {number}
  */
 
-const m = 1;
-const l = 1;
-
-function sum() {
-  return m + l;
+function pow(m, n) {
+  return m ** n;
 }
-
-sum();
