@@ -6,10 +6,10 @@
  */
 
 const m = 1;
-const n = 1;
+const l = 1;
 
 function sum() {
-  return m + n;
+  return m + l;
 }
 
 sum();

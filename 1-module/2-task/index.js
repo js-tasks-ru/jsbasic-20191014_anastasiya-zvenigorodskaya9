@@ -10,26 +10,21 @@ function print(text) {
  * чтобы функция sayHello работала корректно
  */
 function isValid(name) {
-  name = name.replace(/\s/g, '');
-
-  let result;
-  if (name.length > 3) {
-    result = true;
-  } else {
-    result = false;
+  if (!name || name.indexOf(' ') !== -1 || name.length < 4) {
+    return false;
   }
-  return result;
+
+  return true;
 }
 
 function sayHello() {
-  let userName = prompt('Введите ваше имя');
-  userName = userName.replace(/\s/g, '');
+  const userName = prompt('Введите ваше имя');
 
   if (isValid(userName)) {
-    alert(`Welcome back,${userName} !`);
+    print(`Welcome back, ${userName}!`);
   } else {
-    alert('Некорректное имя');
+    print('Некорректное имя');
   }
 }
 
-sayHello();
+sayHello('user');
