@@ -3,6 +3,7 @@
  * @param {Object} obj - клонируем объект
  * @returns {Object}
  */
+
 function clone(obj) {
   const result = {};
 
@@ -20,3 +21,5 @@ function clone(obj) {
 
   return result;
 }
+
+clone();
