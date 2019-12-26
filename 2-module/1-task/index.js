@@ -18,8 +18,19 @@ function clone(obj) {
       result[key] = obj[key];
     }
   }
-
   return result;
 }
 
-clone();
+const user = {
+  name: 'John',
+  age: 30,
+};
+
+function cloneUser() {
+  clonedUser = clone(user);
+  user.name = 'Bill';
+  alert(user.name);
+  alert(clonedUser.name);
+}
+
+cloneUser();
