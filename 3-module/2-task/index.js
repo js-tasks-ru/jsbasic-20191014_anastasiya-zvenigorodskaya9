@@ -13,10 +13,14 @@ const inputArray = inputData.split(' ');
 
 
 function getMinMax(str) {
-  const minValue = Math.min.apply(null, str);
-  const maxValue = Math.max.apply(null, str);
-  console.log(minValue);
-  console.log(maxValue);
+  let segments = str.match(/(-|\+)?[\d]+(\.[\d]+)?/ig) || [];
+
+  segments = segments.map(seg => parseFloat(seg));
+
+  return {
+    min: Math.min(...segments),
+    max: Math.max(...segments),
+  };
 }
 
 
