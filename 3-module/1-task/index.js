@@ -4,8 +4,6 @@
  * @param {number} age - максимальный возраст
  * @returns {string}
  */
-
-/* eslint-disable */
 /* eslint-disable */
 const userData = [
     {
@@ -63,10 +61,10 @@ const userData = [
 const userAge = 25;
 
 function showSalary(data, age) {
-    return data
-      .filter(item => item.age <= age)
-      .map(item => `${item.name}, ${item.balance}`)
-      .join('\n');
+  return data
+    .filter(item => item.age <= age)
+    .map(item => `${item.name}, ${item.balance}`)
+    .join('\n');
 }
 
 showSalary(userData, userAge);
