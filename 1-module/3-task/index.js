@@ -7,6 +7,9 @@
 function ucFirst(str) {
   if (str.length > 0) {
     let firstSymbol = str[0].toUpperCase();
-    return firstSymbol + str.slice(1);
+    let capitalizedStr = firstSymbol + str.slice(1);
+    return capitalizedStr;
   } else {return '';}
 }
+
+ucFirst('');
